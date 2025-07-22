@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SiteShelf - Your Website Showcase</title>
+      <link rel="icon" type="image/png" href="assets/favicon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: radial-gradient(circle at top, #1e293b, #0f172a);
+    }
+    .fade-in {
+      animation: fadeIn 1.5s ease-in-out forwards;
+      opacity: 0;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body class="text-white font-sans">
+  <canvas id="bgCanvas" class="fixed inset-0 z-0"></canvas>
+
+  <header class="relative z-10 py-6 px-8 flex justify-between items-center">
+    <h1 class="text-3xl font-bold">SiteShelf</h1>
+  </header>
+
+  <main class="relative z-10 px-8 mt-20">
+    <section class="text-center fade-in">
+      <h1 id="typed-text" class="text-6xl font-extrabold mb-6 h-24"></h1>
+
+
+      <p class="text-xl text-gray-300 mb-8">All my websites in one elegant place — accessible via custom links.</p>
+      <a href="#projects" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-2xl transition transform hover:scale-105">Explore Projects</a>
+    </section>
+
+    <section id="projects" class="mt-24 fade-in">
+      <h3 class="text-4xl font-bold mb-10 text-center">Featured Websites</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Example project cards -->
+        <div class="rounded-2xl p-6 bg-white/10 border border-white/20 backdrop-blur-xl shadow-xl hover:scale-105 hover:ring-2 hover:ring-blue-400/30 transition-all duration-300">
+
+
+          <h4 class="text-xl font-semibold mb-2">Portfolio Site</h4>
+          <p class="text-gray-300 mb-4">A sleek personal portfolio site built with React.</p>
+          <a href="https://mukuldev-official.github.io/craftmyprofile/" class="text-blue-400 hover:underline">Visit Site</a>
+        </div>
+        <div class="rounded-2xl p-6 bg-white/10 border border-white/20 backdrop-blur-xl shadow-xl hover:scale-105 hover:ring-2 hover:ring-blue-400/30 transition-all duration-300">
+
+
+          <h4 class="text-xl font-semibold mb-2">Love Diaries</h4>
+          <p class="text-gray-300 mb-4">Most Cutest thing you can gift to your partner..</p>
+          <a href="https://mukuldev-official.github.io/A-D-Diaries/" class="text-blue-400 hover:underline">Visit Site</a>
+        </div>
+        <div class="rounded-2xl p-6 bg-white/10 border border-white/20 backdrop-blur-xl shadow-xl hover:scale-105 hover:ring-2 hover:ring-blue-400/30 transition-all duration-300">
+
+
+          <h4 class="text-xl font-semibold mb-2">DearChat</h4>
+          <p class="text-gray-300 mb-4">Personal Only Two persons Chat App With Unique Security Code Login.</p>
+          <a href="https://mukuldev-official.github.io/DearChat/" class="text-blue-400 hover:underline">Visit Site</a>
+        </div>
+        <!-- Add more cards as needed -->
+      </div>
+    </section>
+
+    <section id="about" class="mt-24 fade-in px-8 max-w-6xl mx-auto">
+  <div class="grid md:grid-cols-2 gap-12 items-center">
+    <!-- Text Content -->
+    <div>
+      <h3 class="text-4xl font-bold mb-6">About SiteShelf</h3>
+      <p class="text-gray-300 text-lg">
+        SiteShelf is your personal hub to showcase all the websites you've built. 
+        Whether you're a freelancer or just passionate about web development, 
+        this platform gives you a clean, organized space to display and share your work 
+        with unique links and modern design.
+      </p>
+    </div>
+
+    <!-- Image Content -->
+    <div class="flex justify-center">
+      <img src="assets/extra.png" 
+           alt="Dashboard illustration" 
+           class="rounded-2xl border border-white/20 shadow-lg max-w-full w-full md:max-w-sm" />
+    </div>
+  </div>
+</section>
+
+
+    <section id="contact" class="mt-24 fade-in max-w-xl mx-auto text-center">
+      <h3 class="text-4xl font-bold mb-6">Get In Touch</h3>
+      <div id="thankYou" class="hidden text-green-400 mb-4 font-semibold">
+  ✅ Message sent successfully!
+</div>
+
+      <form action="https://formspree.io/f/xovledzv" method="POST" class="space-y-4">
+  <input type="text" name="name" placeholder="Your Name" required
+    class="w-full px-4 py-2 rounded-xl bg-white/10 text-white placeholder-gray-400 focus:outline-none">
+    
+  <input type="email" name="email" placeholder="Your Email" required
+    class="w-full px-4 py-2 rounded-xl bg-white/10 text-white placeholder-gray-400 focus:outline-none">
+    
+  <textarea rows="4" name="message" placeholder="Your Message" required
+    class="w-full px-4 py-2 rounded-xl bg-white/10 text-white placeholder-gray-400 focus:outline-none"></textarea>
+    
+  <button type="submit"
+    class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-2xl transition transform hover:scale-105">
+    Send Message
+  </button>
+</form>
+
+    </section>
+  </main>
+  
+
+<footer class="relative z-10 mt-32 px-6 py-10 bg-white/5 backdrop-blur-md border-t border-white/10 text-gray-300">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+    
+    <!-- Left: Branding -->
+    <div>
+      <h3 class="text-2xl font-bold mb-2">SiteShelf</h3>
+      <p class="text-sm text-gray-400">© 2025 SiteShelf. Built with love & creativity.</p>
+    </div>
+
+    <!-- Center: Contact Info -->
+    <div>
+      <h4 class="text-lg font-semibold mb-2">Contact</h4>
+      <p class="text-sm">📧 <a href="mailto:deepanshu532007@gmail.com" class="text-blue-400 hover:underline">deepanshu532007@gmail.com</a></p>
+    </div>
+
+    <!-- Right: Socials -->
+    <div>
+      <h4 class="text-lg font-semibold mb-2">Follow Me</h4>
+      <a href="https://www.instagram.com/iitian_mk/" target="_blank" class="inline-flex items-center gap-2 text-sm text-pink-400 hover:underline transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-pink-500" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M7.75 2A5.75 5.75 0 0 0 2 7.75v8.5A5.75 5.75 0 0 0 7.75 22h8.5A5.75 5.75 0 0 0 22 16.25v-8.5A5.75 5.75 0 0 0 16.25 2h-8.5ZM4.5 7.75a3.25 3.25 0 0 1 3.25-3.25h8.5a3.25 3.25 0 0 1 3.25 3.25v8.5a3.25 3.25 0 0 1-3.25 3.25h-8.5A3.25 3.25 0 0 1 4.5 16.25v-8.5ZM12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm0 1.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm4.88-.63a.88.88 0 1 1-1.75 0 .88.88 0 0 1 1.75 0Z"/>
+        </svg>
+        @iitian_mk
+      </a>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  const form = document.querySelector("form");
+  const thankYou = document.getElementById("thankYou");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      thankYou.classList.remove("hidden");
+      form.reset();
+    } else {
+      alert("There was a problem submitting your form. Please try again.");
+    }
+  });
+</script>
+
+  <script>
+    
+    // Canvas background effect
+    const canvas = document.getElementById('bgCanvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    let stars = Array.from({ length: 150 }, () => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      radius: Math.random() * 1.5,
+      alpha: Math.random(),
+      speed: Math.random() * 0.02 + 0.01
+    }));
+
+    function drawStars() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let star of stars) {
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255, 255, 255, ${star.alpha})`;
+        ctx.fill();
+        star.alpha += star.speed;
+        if (star.alpha > 1 || star.alpha < 0) star.speed *= -1;
+      }
+      requestAnimationFrame(drawStars);
+    }
+
+    drawStars();
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+    
+  </script>
+<script>
+  const texts = [
+    "Welcome to SiteShelf",
+    "Your Website Hub",
+    "Built by Mukul"
+  ];
+  const typedText = document.getElementById("typed-text");
+  let textIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function typeEffect() {
+    const current = texts[textIndex];
+    const visibleText = current.substring(0, charIndex);
+    typedText.innerHTML = visibleText + '<span class="border-r-2 border-white animate-pulse ml-1"></span>';
+
+    if (!isDeleting && charIndex < current.length) {
+      charIndex++;
+      setTimeout(typeEffect, 100);
+    } else if (isDeleting && charIndex > 0) {
+      charIndex--;
+      setTimeout(typeEffect, 50);
+    } else {
+      isDeleting = !isDeleting;
+      if (!isDeleting) textIndex = (textIndex + 1) % texts.length;
+      setTimeout(typeEffect, 1200); // wait before delete/start
+    }
+  }
+
+  window.addEventListener("load", typeEffect);
+</script>
+
+</body>
+
+</html>
